@@ -1,257 +1,279 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mai's Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Mai | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:#faf7ff;
-    color:#444;
+font-family:'Outfit',sans-serif;
+background:#fcf8ff;
+overflow-x:hidden;
 }
 
-/* NAVBAR */
-
-nav{
-    position:fixed;
-    width:100%;
-    top:0;
-    background:rgba(255,255,255,.9);
-    backdrop-filter:blur(10px);
-    padding:20px;
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    z-index:1000;
+.section{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:80px;
 }
 
-nav a{
-    text-decoration:none;
-    color:#8b4bb2;
-    font-weight:600;
+.left{
+flex:1;
 }
 
-nav a:hover{
-    color:#ff69b4;
+.right{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-/* HERO */
-
-.hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:
-    linear-gradient(
-    135deg,
-    #ffd6ec,
-    #d9d2ff,
-    #c9f4ff);
+.big-name{
+font-family:'Great Vibes',cursive;
+font-size:8rem;
+color:#8b4bb2;
+line-height:1;
 }
 
-.hero h1{
-    font-family:'Great Vibes',cursive;
-    font-size:7rem;
-    color:#8b4bb2;
+.tag{
+font-size:1.2rem;
+letter-spacing:4px;
+text-transform:uppercase;
+margin-top:20px;
+color:#777;
 }
 
-.hero h2{
-    font-size:1.5rem;
-    margin:15px 0;
+.description{
+margin-top:30px;
+font-size:1.1rem;
+line-height:1.9;
+max-width:600px;
 }
 
-.hero p{
-    max-width:700px;
-    font-size:1.1rem;
-    line-height:1.8;
-    padding:0 20px;
+.circle{
+width:400px;
+height:400px;
+border-radius:50%;
+background:linear-gradient(
+135deg,
+#ffd4ea,
+#d7cbff,
+#c9f4ff
+);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:120px;
+box-shadow:0 20px 50px rgba(0,0,0,.1);
 }
 
-.btn{
-    margin-top:30px;
-    padding:15px 35px;
-    background:#ff69b4;
-    color:white;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+padding:80px;
 }
 
-.btn:hover{
-    transform:translateY(-5px);
+.stat{
+background:white;
+padding:40px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
-/* SECTIONS */
+.stat h2{
+font-size:3rem;
+color:#8b4bb2;
+}
 
-section{
-    padding:100px 10%;
+.hobbies{
+padding:100px 80px;
 }
 
 .title{
-    text-align:center;
-    font-size:3rem;
-    margin-bottom:50px;
-    color:#8b4bb2;
-    font-family:'Great Vibes',cursive;
+font-family:'Great Vibes',cursive;
+font-size:5rem;
+text-align:center;
+color:#8b4bb2;
+margin-bottom:60px;
 }
 
-.about{
-    text-align:center;
-    max-width:850px;
-    margin:auto;
-    line-height:2;
+.hobby-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
 }
 
-/* CARDS */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+.hobby{
+padding:50px;
+border-radius:30px;
+color:white;
 }
 
-.card{
-    background:white;
-    padding:30px;
-    border-radius:25px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
+.gym{
+background:linear-gradient(135deg,#ff73b6,#ff9cd1);
 }
 
-.card:hover{
-    transform:translateY(-10px);
+.swim{
+background:linear-gradient(135deg,#5dc8ff,#8fe0ff);
 }
 
-.icon{
-    font-size:60px;
-    margin-bottom:15px;
+.school{
+background:linear-gradient(135deg,#9c7cff,#c2a8ff);
 }
 
-/* GOALS */
-
-.goal{
-    background:white;
-    margin:15px auto;
-    padding:20px;
-    border-radius:20px;
-    max-width:700px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+.hobby h3{
+font-size:2rem;
+margin-bottom:15px;
 }
 
-/* FOOTER */
+.quote{
+padding:150px 40px;
+text-align:center;
+background:white;
+}
+
+.quote h1{
+font-size:4rem;
+font-family:'Great Vibes',cursive;
+color:#8b4bb2;
+}
+
+.quote p{
+font-size:1.3rem;
+margin-top:20px;
+}
 
 footer{
-    background:#8b4bb2;
-    color:white;
-    text-align:center;
-    padding:40px;
+padding:50px;
+text-align:center;
+background:#8b4bb2;
+color:white;
 }
+
+@media(max-width:900px){
+
+.section{
+flex-direction:column;
+text-align:center;
+padding:40px;
+}
+
+.big-name{
+font-size:5rem;
+}
+
+.circle{
+width:250px;
+height:250px;
+font-size:80px;
+margin-top:40px;
+}
+
+.stats{
+grid-template-columns:1fr;
+padding:40px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<nav>
-<a href="#about">About</a>
-<a href="#hobbies">Hobbies</a>
-<a href="#goals">Goals</a>
-</nav>
+<section class="section">
 
-<section class="hero">
+<div class="left">
 
-<h1>Mai</h1>
+<h1 class="big-name">Mai</h1>
 
-<h2>🌸 Grade 5 Student • Gymnast • Swimmer 🌸</h2>
-
-<p>
-Hello! My name is Mai. I am 10 years old and currently in Grade 5.
-I love learning new things, spending time with friends and family,
-and challenging myself to improve every day.
+<p class="tag">
+Grade 5 Student • Age 10
 </p>
 
-<a href="#about" class="btn">Explore My Portfolio ✨</a>
-
-</section>
-
-<section id="about">
-
-<h2 class="title">About Me</h2>
-
-<div class="about">
-
-<p>
-My name is Mai and I am a 10-year-old Grade 5 student. I enjoy
-working hard at school and learning new skills. I believe that
-every challenge is an opportunity to grow and become better.
+<p class="description">
+Hello! I'm Mai. I am 10 years old and currently in Grade 5.
+I love challenging myself, learning new things, and growing
+every day. My biggest passions are gymnastics and swimming,
+which help me stay active, confident, and healthy.
 </p>
 
-<br>
+</div>
 
-<p>
-I am passionate about gymnastics and swimming. These activities
-help me stay active, build confidence, and develop discipline.
-They have taught me the importance of practice, patience,
-and perseverance.
-</p>
+<div class="right">
 
-<br>
-
-<p>
-My goal is to continue improving my abilities, achieve success
-in school, and always give my best effort in everything I do.
-</p>
+<div class="circle">
+🤸‍♀️
+</div>
 
 </div>
 
 </section>
 
-<section id="hobbies">
+<section class="stats">
 
-<h2 class="title">My Hobbies</h2>
+<div class="stat">
+<h2>10</h2>
+<p>Years Old</p>
+</div>
 
-<div class="cards">
+<div class="stat">
+<h2>5</h2>
+<p>Grade Level</p>
+</div>
 
-<div class="card">
-<div class="icon">🤸‍♀️</div>
-<h3>Gymnastics</h3>
+<div class="stat">
+<h2>2</h2>
+<p>Favorite Sports</p>
+</div>
+
+</section>
+
+<section class="hobbies">
+
+<h2 class="title">Things I Love</h2>
+
+<div class="hobby-grid">
+
+<div class="hobby gym">
+<h3>🤸 Gymnastics</h3>
 <p>
-I enjoy practicing gymnastics, learning new skills,
-and becoming stronger and more flexible.
+Gymnastics helps me build strength,
+flexibility, balance, and confidence.
+I enjoy learning new skills and improving
+through practice.
 </p>
 </div>
 
-<div class="card">
-<div class="icon">🏊‍♀️</div>
-<h3>Swimming</h3>
+<div class="hobby swim">
+<h3>🏊 Swimming</h3>
 <p>
-Swimming helps me stay healthy, active,
-and confident in the water.
+Swimming keeps me active and healthy.
+I enjoy spending time in the water and
+working to become a stronger swimmer.
 </p>
 </div>
 
-<div class="card">
-<div class="icon">📚</div>
-<h3>Learning</h3>
+<div class="hobby school">
+<h3>📚 Learning</h3>
 <p>
-I enjoy learning new things and discovering
-interesting ideas at school.
+I enjoy learning at school, exploring
+new ideas, and discovering interesting
+things every day.
 </p>
 </div>
 
@@ -259,25 +281,20 @@ interesting ideas at school.
 
 </section>
 
-<section id="goals">
+<section class="quote">
 
-<h2 class="title">My Goals</h2>
+<h1>Dream Big ✨</h1>
 
-<div class="goal">🌟 Improve my gymnastics skills</div>
-<div class="goal">🏊‍♀️ Become a stronger swimmer</div>
-<div class="goal">📚 Do my best in school</div>
-<div class="goal">💪 Grow more confident every day</div>
-<div class="goal">💖 Always try my best</div>
+<p>
+Work hard, stay positive, and never stop
+believing in yourself.
+</p>
 
 </section>
 
 <footer>
 
-<h3>Made with 💖 by Mai</h3>
-
-<p>
-"Dream big, work hard, and never give up."
-</p>
+Made with 💜 by Mai
 
 </footer>
 
